@@ -18,7 +18,8 @@ const config: Config = {
         aquablue: '#00A8B9',
         darkeraquablue: '#0074A6',
         dimgray: '#696969',
-        charcoal: '#343434'
+        charcoal: '#343434',
+        almostblack: '#181818'
       },
       screens: {
         '1200': '1200px',
@@ -31,6 +32,9 @@ const config: Config = {
         11: '0.6875rem',
         13: '0.8125rem',
         15: '0.9375rem'
+      },
+      backgroundImage: {
+        'aqua-g': 'linear-gradient(to bottom, #16A085, #00A8B9)'
       }
     }
   },
