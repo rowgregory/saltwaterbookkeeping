@@ -7,7 +7,7 @@ const NavLinkWithDot: FC<NavLinkWithDotProps> = ({ link, i }) => {
     <Link
       href={link.linkKey}
       key={i}
-      className={`flex items-center roboto-bold text-15 ${
+      className={`flex items-center roboto-bold text-15 duration-300 hover:text-white ${
         link.active ? 'text-white' : 'text-dimgray'
       }`}
     >

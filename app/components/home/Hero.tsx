@@ -21,10 +21,10 @@ const Hero = () => {
         <source src="/videos/hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="triangle-shape hidden xl:block"></div>
-      <div className="triangle-shape-3 hidden xl:block"></div>
-      <div className="absolute z-20 top-0 left-0 flex-col w-full min-h-96 h-full max-h-[900px] flex justify-center bg-[#1c1c1c]/20">
-        <div className="max-w-1200 w-full mx-auto px-3 xl:px-0 flex flex-col gap-5">
+      <div className="t-1 hidden xl:block"></div>
+      <div className="t-2 hidden xl:block"></div>
+      <div className="absolute px-4 z-20 top-0 left-0 flex-col w-full min-h-96 h-full max-h-[900px] flex justify-center bg-[#1c1c1c]/20">
+        <div className="max-w-1200 w-full mx-auto xl:px-0 flex flex-col gap-5">
           <h1 className="clip-slide-down hidden sm:block mb-5 text-white roboto-bold text-2xl">
             Bookkeeping Made Easy
           </h1>

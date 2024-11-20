@@ -10,7 +10,7 @@ const HighlightCard: FC<HightlightCardProps> = ({ card }) => {
   return (
     <Link
       href="/services"
-      className="card-container col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center group"
+      className="staggered-animation card-container col-span-12 md:col-span-6 lg:col-span-4 flex flex-col items-center group"
     >
       <div className="w-full overflow-hidden">
         <div
@@ -30,14 +30,14 @@ const HighlightCard: FC<HightlightCardProps> = ({ card }) => {
       before:z-0
       `}
       >
-        <div className="flex items-center gap-x-3 relative z-10">
-          <span className="h-14 w-14 border-[3px] border-[#343434] rounded-full bg-aquablue flex items-center justify-center">
+        <div className="grid grid-cols-12 gap-x-3 relative z-10">
+          <span className="col-span-4 h-14 w-14 border-[3px] border-[#343434] rounded-full bg-aquablue flex items-center justify-center">
             <div
               style={{ backgroundImage: `url(${card.icon})` }}
               className="w-8 h-8 bg-cover bg-no-repeat"
             ></div>
           </span>
-          <span className="poppins-bold text-lg max-w-20">{card.title}</span>
+          <span className="col-span-8 poppins-bold text-lg max-w-28">{card.title}</span>
         </div>
         <ArrowAnimatedLink />
       </div>
