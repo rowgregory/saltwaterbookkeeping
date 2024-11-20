@@ -13,7 +13,7 @@ const HighlightCards = () => {
           {services
             .map((service, i) => <HighlightCard key={i} card={service} />)
             .reverse()
-            .filter((_: any, i: number) => i < 3)}
+            .filter((_, i) => i < 3)}
         </div>
       </div>
       <div className="flex justify-center mt-16">
