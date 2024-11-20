@@ -1,38 +1,60 @@
-import {
-  bookkeepingIcon,
-  financialReportsIcon,
-  invoicingIcon,
-  payrollIcon,
-  taxPreparationIcon
-} from '../lib/icons'
-import { ServicesProps } from '../types/services.types'
+interface ServicesProps {
+  icon: string
+  title: string
+  img: string
+}
 
 const services: ServicesProps[] = [
   {
-    icon: bookkeepingIcon,
-    title: 'Bookkeeping',
-    text: 'Accurate and reliable bookkeeping services to keep your financial records organized and up-to-date.'
+    title: 'Setup and Support',
+    icon: '/images/s-1.png',
+    img: '/images/s-i-1.png'
   },
   {
-    icon: taxPreparationIcon,
-    title: 'Tax Preparation',
-    text: 'Comprehensive tax preparation and filing services to ensure compliance and maximize returns.'
+    title: 'Clean-up Projects',
+    icon: '/images/s-2.png',
+    img: '/images/s-i-2.png'
   },
   {
-    icon: invoicingIcon,
-    title: 'Invoicing & Accounts Receivable',
-    text: 'Professional invoicing and accounts receivable management to streamline cash flow.'
+    title: 'Diagnostic Review',
+    icon: '/images/s-3.png',
+    img: '/images/s-i-3.png'
   },
   {
-    icon: financialReportsIcon,
+    title: 'Employee Training',
+    icon: '/images/s-4.png',
+    img: '/images/s-i-4.png'
+  },
+  {
+    title: 'Accounts Payable',
+    icon: '/images/s-5.png',
+    img: '/images/s-i-5.png'
+  },
+  {
+    title: 'Accounts Receivable',
+    icon: '/images/s-6.png',
+    img: '/images/s-i-6.png'
+  },
+  {
+    title: 'Expense and Income Tracking',
+    icon: '/images/s-7.png',
+    img: '/images/s-i-7.png'
+  },
+  {
+    title: 'Bank Reconciliations',
+    icon: '/images/s-8.png',
+    img: '/images/s-i-8.png'
+  },
+  {
     title: 'Financial Reporting',
-    text: 'Detailed financial reports to provide clarity and insight into your business performance.'
+    icon: '/images/s-9.png',
+    img: '/images/s-i-9.png'
   },
   {
-    icon: payrollIcon,
-    title: 'Payroll Services',
-    text: 'Efficient payroll processing and compliance management for businesses of all sizes.'
+    title: 'End-of-Year Preparation',
+    icon: '/images/s-10.png',
+    img: '/images/s-i-10.png'
   }
 ]
 
-export { services }
+export default services
