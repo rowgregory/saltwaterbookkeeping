@@ -18,7 +18,7 @@ const TailoredSolutions = () => {
         playsInline
         preload="auto"
       >
-        <source src="/videos/t-s-vid-2.mp4" type="video/mp4" />
+        <source src="/videos/t-s-vid.mp4" type="video/mp4" />
       </video>
       <div className="relative flex justify-center items-center w-full h-full py-28 z-10 px-4">
         <div className="max-w-1200 w-full mx-auto grid grid-cols-12 gap-y-10 lg:gap-x-16">
