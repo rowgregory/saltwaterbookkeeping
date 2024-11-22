@@ -19,7 +19,7 @@ const WhoWeAre = () => {
             dedicated to delivering efficient and personalized financial solutions with a foundation
             of technical expertise and problem-solving skills.
           </h2>
-          <div className="flex items-center gap-x-5 mb-10">
+          <div className="flex flex-col sm:flex-row items-center gap-y-5 sm:gap-x-5 mb-10">
             {whoWeAre.map((data, i) => (
               <div key={i} className=" flex items-center gap-x-4 relative group">
                 <div className="absolute bg-[#343434] w-10 h-10 rounded-full z-0 duration-200 ease-in-out group-hover:translate-x-2"></div>

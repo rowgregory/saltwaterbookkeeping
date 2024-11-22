@@ -12,10 +12,10 @@ const Footer = () => {
   const pathname = useCustomPathname()
 
   return (
-    <div className="px-4 pt-40 pb-12">
+    <div className="px-4 sm:pt-40 pb-12">
       <div>
         <div className="max-w-1200 mx-auto w-full">
-          <div className="grid grid-cols-12 gap-y-16 md:gap-x-16">
+          <div className="grid grid-cols-12 gap-y-16 md:gap-x-20">
             <div className="col-span-12 md:col-span-4 flex flex-col gap-y-6">
               <Logo className="w-44" />
               <span className="roboto-regular text-sm text-[#bbb]">
@@ -23,8 +23,9 @@ const Footer = () => {
                 they do best—growing their businesses.
               </span>
               <div className="flex items-cente gap-x-6">
-                {socialMedia.map(({ icon }, i) => (
+                {socialMedia.map(({ icon, linkKey }, i) => (
                   <div
+                    onClick={() => window.open(linkKey, '_blank')}
                     key={i}
                     className="group relative w-10 h-10 bg-graphite rounded-full flex items-center justify-center cursor-pointer overflow-hidden"
                   >
@@ -41,7 +42,9 @@ const Footer = () => {
                   <AwesomeIcon icon={mapMarkerIcon} className="w-3 h-3 text-aquablue" />
                 </div>
                 <div className="col-span-11">
-                  <span className="text-[#bbb] text-sm roboto-regular">Marblehead, MA 01901</span>
+                  <span className="text-[#bbb] text-sm roboto-regular">
+                    450B Paradise Rd #103, Swampscott, MA 01907
+                  </span>
                 </div>
               </div>
               <div className="grid grid-cols-12 gap-4 mb-4">
@@ -60,7 +63,7 @@ const Footer = () => {
                 </div>
                 <div className="col-span-11">
                   <a href="tel:(781)3677809" className="text-[#bbb] text-sm roboto-regular">
-                    19786602794
+                    19782194339
                   </a>
                 </div>
               </div>

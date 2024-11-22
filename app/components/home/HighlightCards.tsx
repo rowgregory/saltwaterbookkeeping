@@ -19,10 +19,10 @@ const HighlightCards = () => {
       <div className="flex justify-center mt-16">
         <Link
           href="/services"
-          className="text-white roboto-bold flex items-center gap-x-3 w-fit group"
+          className="text-white roboto-bold flex flex-col sm:flex-row items-center gap-x-3 w-fit group text-center"
         >
           Businesses and individuals rely on our services.{' '}
-          <span className="flex items-center gap-x-2 text-sm text-aquablue">
+          <span className="flex items-center gap-x-2 text-sm text-aquablue mt-3 sm:mt-0">
             All Services{' '}
             <AwesomeIcon
               icon={arrowRightIcon}

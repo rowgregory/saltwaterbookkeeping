@@ -3,24 +3,18 @@
 import useVideo from '@/app/hooks/useVideo'
 import React from 'react'
 import SlideEffectLink from '../common/SlideEffectLink'
+import Video from '../Video'
 
 const Hero = () => {
   const { videoRef } = useVideo()
 
   return (
     <div className="w-full relative">
-      <video
-        ref={videoRef}
+      <Video
+        videoRef={videoRef}
         className="w-full min-h-96 h-full sm:min-h-[500px] md:min-h-[750px] max-h-[900px] fade-in block object-cover z-0"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        src="/videos/hero.mp4"
+      />
       <div className="t-1 hidden xl:block"></div>
       <div className="t-2 hidden xl:block"></div>
       <div className="absolute px-4 z-20 top-0 left-0 flex-col w-full min-h-96 h-full max-h-[900px] flex justify-center bg-[#1c1c1c]/20">

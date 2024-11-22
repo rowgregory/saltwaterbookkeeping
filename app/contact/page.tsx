@@ -45,7 +45,7 @@ const Contact = () => {
               <div className="col-span-9 flex flex-col justify-between">
                 <span className="text-lg poppins-bold mb-2">Have any questions?</span>
                 <a href="tel:(781)3677809" className="text-white text-sm md:text-lg roboto-regular">
-                  +1 (978) 660-2794
+                  +1 (978) 219-4339
                 </a>
               </div>
             </div>
@@ -57,14 +57,16 @@ const Contact = () => {
                 />
               </div>
               <div className="col-span-9 flex flex-col justify-between">
-                <span className="text-lg poppins-bold mb-2">Bookkeeping Without Boundaries</span>
-                <span className="text-white text-sm md:text-lg roboto-regular">Marblehead, MA</span>
+                <span className="text-lg poppins-bold mb-2">Bookkeeping on the North Shore</span>
+                <span className="text-white text-sm md:text-lg roboto-regular">
+                  450B Paradise Rd #103, Swampsctott, MA 01907
+                </span>
               </div>
             </div>
           </div>
           <div className="col-span-12 lg:col-span-7">
             <div className="relative w-full h-full aspect-square">
-              <LocationMap latitude={42.5} longitude={-70.8578} />
+              <LocationMap latitude={42.4709} longitude={-70.9176} />
             </div>
           </div>
         </div>

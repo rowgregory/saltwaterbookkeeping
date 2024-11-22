@@ -5,17 +5,13 @@ export interface HeaderStatePayload {
   success: boolean
   error: string | false | null
   navigationDrawer: boolean
-  keywordModal: boolean
-  keyword: string
 }
 
 const initialHeaderState: HeaderStatePayload = {
   loading: false,
   success: false,
   error: null,
-  navigationDrawer: false,
-  keywordModal: false,
-  keyword: ''
+  navigationDrawer: false
 }
 
 export const headerSlice = createSlice({
@@ -27,29 +23,10 @@ export const headerSlice = createSlice({
     },
     closeNavigationDrawer: (state) => {
       state.navigationDrawer = false
-    },
-    openKeywordModal: (state) => {
-      state.keywordModal = true
-    },
-    closeKeywordModal: (state) => {
-      state.keywordModal = false
-    },
-    setKeyword: (state, { payload }) => {
-      state.keyword = payload.keyword
-    },
-    resetKeyword: (state) => {
-      state.keyword = ''
     }
   }
 })
 
 export const headerReducer = headerSlice.reducer as Reducer<HeaderStatePayload>
 
-export const {
-  openNavigationDrawer,
-  closeNavigationDrawer,
-  openKeywordModal,
-  closeKeywordModal,
-  setKeyword,
-  resetKeyword
-} = headerSlice.actions
+export const { openNavigationDrawer, closeNavigationDrawer } = headerSlice.actions

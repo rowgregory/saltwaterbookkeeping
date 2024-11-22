@@ -1,18 +1,10 @@
-import { facebookIcon, instagramIcon, linkedinIcon } from '../lib/icons'
+import { facebookIcon } from '../lib/icons'
 import { NavigationLinkProps, SocialMediaProps } from '../types/header.footer.types'
 
 const socialMedia: SocialMediaProps[] = [
   {
-    linkKey: '',
+    linkKey: 'https://www.facebook.com/pam.driscoll.71',
     icon: facebookIcon
-  },
-  {
-    linkKey: '',
-    icon: instagramIcon
-  },
-  {
-    linkKey: '',
-    icon: linkedinIcon
   }
 ]
 

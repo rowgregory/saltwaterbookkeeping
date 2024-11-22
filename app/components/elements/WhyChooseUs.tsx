@@ -27,9 +27,9 @@ const WhyChooseUs = () => {
                 <AwesomeIcon icon={data.icon} className="w-8 h-8 text-white" />
               </div>
               <div className="max-w-40 text-center w-full mb-4">
-                <span className="poppins-bold text-xl">{data.title}</span>
+                <span className="poppins-bold text-17 sm:text-xl">{data.title}</span>
               </div>
-              <p className="text-center leading-6 max-h-0 group-hover:max-h-[200px] scale-0 group-hover:scale-105 transition-all duration-500 text-sm roboto-regular">
+              <p className="text-center leading-6 max-h-0 group-hover:max-h-[200px] scale-0 group-hover:scale-105 transition-all duration-500 text-xs sm:text-sm roboto-regular">
                 {data.description}
               </p>
             </div>

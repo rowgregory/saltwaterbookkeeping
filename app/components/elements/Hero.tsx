@@ -9,7 +9,7 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({ src, title }) => {
   return (
-    <div className="relative w-full h-96">
+    <div className="relative w-full h-60 sm:h-96">
       <Picture
         src={src}
         alt="Saltwater Bookkeeping"
@@ -21,7 +21,7 @@ const Hero: FC<HeroProps> = ({ src, title }) => {
       h-full flex justify-center bg-black/70 px-3"
       >
         <div className="max-w-screen-md mx-auto w-full flex flex-col justify-center items-center">
-          <h1 className="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
+          <h1 className="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-center">
             {title}
           </h1>
           <Breadcrumb breadcrumb={title} />

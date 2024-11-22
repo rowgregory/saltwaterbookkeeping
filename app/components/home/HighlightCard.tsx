@@ -25,7 +25,7 @@ const HighlightCard: FC<HightlightCardProps> = ({ card }) => {
         </div>
       </div>
       <div
-        className={`w-5/6 bg-graphite h-28 -mt-16 flex items-center justify-between gap-5 p-7 relative z-40 overflow-hidden
+        className={`w-full sm:w-5/6 bg-graphite h-28 -mt-16 flex items-center justify-between gap-5 p-4 sm:p-7 relative z-40 overflow-hidden
       before:absolute before:content-[''] before:top-0 before:-left-3 before:bg-aqua-g before:w-20 before:h-40 before:skew-x-[20deg]
       before:z-0
       `}
@@ -37,7 +37,7 @@ const HighlightCard: FC<HightlightCardProps> = ({ card }) => {
               className="w-8 h-8 bg-cover bg-no-repeat"
             ></div>
           </span>
-          <span className="col-span-8 poppins-bold text-lg max-w-28">{card.title}</span>
+          <span className="col-span-8 poppins-bold text-17 sm:text-lg max-w-28">{card.title}</span>
         </div>
         <ArrowAnimatedLink />
       </div>
