@@ -24,7 +24,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ service }) => {
         </div>
       </div>
       <div
-        className={`w-5/6 bg-graphite h-28 -mt-16 flex items-center justify-between gap-5 p-7 relative z-40 overflow-hidden
+        className={`w-[95%] sm:w-5/6 bg-graphite h-28 -mt-16 flex items-center justify-between gap-5 p-4 sm:p-7 relative z-40 overflow-hidden
         before:absolute before:content-[''] before:top-0 before:-left-3 before:bg-aqua-g 
         before:w-20 before:h-40 before:skew-x-[20deg] before:z-0`}
       >
@@ -35,7 +35,9 @@ const ServiceCard: FC<ServiceCardProps> = ({ service }) => {
               className="w-8 h-8 bg-cover bg-no-repeat"
             ></div>
           </span>
-          <span className="col-span-8 flex items-center poppins-bold text-lg">{service.title}</span>
+          <span className="col-span-8 flex items-center poppins-bold text-17 sm:text-lg">
+            {service.title}
+          </span>
         </div>
       </div>
     </div>

@@ -51,7 +51,7 @@ const services: ServicesProps[] = [
     img: '/images/s-i-9.png'
   },
   {
-    title: 'End-of-Year Preparation',
+    title: 'End of Year Preparation',
     icon: '/images/s-10.png',
     img: '/images/s-i-10.png'
   }

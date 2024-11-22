@@ -23,7 +23,7 @@ const AnimatedText: FC<AnimatedTextProps> = ({ text }) => {
             transitionTimingFunction: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)'
           }}
         >
-          <span className="text-5xl poppins-bold leading-[60px]">{word}&nbsp;</span>
+          <span className="text-4xl sm:text-5xl poppins-bold leading-[60px]">{word}&nbsp;</span>
         </span>
       ))}
     </div>

@@ -21,7 +21,9 @@ import {
   faThumbsUp,
   faUserShield,
   faChevronRight,
-  faMapMarker
+  faMapMarker,
+  faStar,
+  faTimes
 } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
@@ -49,6 +51,8 @@ export const clientFirstIcon = faUserShield
 export const chevronRightIcon = faChevronRight
 export const mapMarkerIcon = faMapMarker
 export const envelopeIcon = faEnvelope
+export const starIcon = faStar
+export const timesIcon = faTimes
 
 export const facebookIcon = faFacebook
 export const instagramIcon = faInstagram

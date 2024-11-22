@@ -4,8 +4,8 @@ const contactInfoBlockData = [
   {
     icon: phoneIcon,
     titleKey: 'Helpline and support',
-    textKey: '+1 978 6602794',
-    onClick: () => (window.location.href = 'tel:+19786602794'),
+    textKey: '+1 978 2194339',
+    onClick: () => (window.location.href = 'tel:+19782194339'),
     className: 'cursor-pointer'
   },
   {

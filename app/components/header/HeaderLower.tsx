@@ -1,9 +1,7 @@
-import { navigationLinks } from '@/app/data/header.footer.data'
-import useCustomPathname from '@/app/hooks/useCustomPathname'
 import React from 'react'
-import AwesomeIcon from '../common/AwesomeIcon'
-import { searchIcon } from '@/app/lib/icons'
+import useCustomPathname from '@/app/hooks/useCustomPathname'
 import NavLinkWithDot from './NavLinkWithDot'
+import { navigationLinks } from '@/app/data/header.footer.data'
 
 const HeaderLower = () => {
   const path = useCustomPathname()
@@ -14,12 +12,6 @@ const HeaderLower = () => {
         {navigationLinks(path).map((link, i) => (
           <NavLinkWithDot key={i} link={link} i={i} />
         ))}
-      </section>
-      <section className="flex items-center gap-x-8">
-        <AwesomeIcon
-          icon={searchIcon}
-          className="w-5 h-5 text-white duration-300 cursor-pointer hover:text-darkeraquablue"
-        />
       </section>
     </div>
   )
