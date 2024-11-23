@@ -13,7 +13,7 @@ const HeaderTop = () => {
   return (
     <div className="bg-graphite lg:bg-inherit px-4 h-[60px] flex items-center lg:h-auto lg:py-3 1200:pt-6 1200:pb-10 1400:pb-6">
       <div className="max-w-[1750px] mx-auto w-full flex items-center justify-between">
-        <Logo className="w-44 lg:w-48" />
+        <Logo className="w-44" src="/images/logo-10.png" />
         <section className="hidden 1400:flex items-center gap-x-8">
           {contactInfoBlockData.map(({ icon, titleKey, textKey, onClick, className }, i) => (
             <ContactInfoBlock

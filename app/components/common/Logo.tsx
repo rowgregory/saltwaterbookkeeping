@@ -13,7 +13,7 @@ const Logo: FC<LogoProps> = ({ className, src, onClick }) => {
     <Link href="/" onClick={onClick}>
       <Picture
         src={`${src ? src : '/images/logo.png'}`}
-        alt="Story Construction"
+        alt="Saltwater Bookkeeping"
         className={`${className}`}
         priority={true}
       />
