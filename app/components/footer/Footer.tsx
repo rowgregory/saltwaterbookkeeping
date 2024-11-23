@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <div className={`${isRouteMatched ? 'block' : 'hidden'} px-4 sm:pt-40 pb-12`}>
       <div className="max-w-1200 mx-auto w-full">
-        <div className="grid grid-cols-12 gap-y-16 md:gap-x-20">
+        <div className="grid grid-cols-12 gap-y-16 sm:gap-x-16 lg:gap-x-20">
           <div className="col-span-12 md:col-span-4 flex flex-col gap-y-6">
             <Logo className="w-44" />
             <span className="roboto-regular text-sm text-[#bbb]">

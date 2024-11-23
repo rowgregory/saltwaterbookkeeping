@@ -28,6 +28,20 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1ca3ba; /* Orange-500 color */
+  border-radius: 6px; /* Rounded thumb */
+  border: 3px solid #1ca3ba;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
 .t-1 {
   background-image: url("/images/t-1.png");
   background-size: cover;
