@@ -45,7 +45,7 @@ const Contact = () => {
               <div className="col-span-9 flex flex-col justify-between">
                 <span className="text-lg poppins-bold mb-2">Have any questions?</span>
                 <a href="tel:(781)3677809" className="text-white text-sm md:text-lg roboto-regular">
-                  +1 (978) 219-4339
+                  (978) 219-4339
                 </a>
               </div>
             </div>

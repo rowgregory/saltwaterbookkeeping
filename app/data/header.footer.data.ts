@@ -3,7 +3,7 @@ import { NavigationLinkProps, SocialMediaProps } from '../types/header.footer.ty
 
 const socialMedia: SocialMediaProps[] = [
   {
-    linkKey: 'https://www.facebook.com/pam.driscoll.71',
+    linkKey: 'https://www.facebook.com/profile.php?id=61569387957878',
     icon: facebookIcon
   }
 ]
@@ -20,7 +20,7 @@ const navigationLinks = (path: string): NavigationLinkProps[] => [
     active: path === '/about'
   },
   {
-    textKey: 'Services',
+    textKey: 'QuickBooks Services',
     linkKey: '/services',
     active: path === '/services'
   },

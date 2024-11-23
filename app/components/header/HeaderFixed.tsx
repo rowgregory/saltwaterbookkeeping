@@ -16,12 +16,12 @@ const HeaderFixed = () => {
 
   return (
     <div
-      className={`fixed z-50 top-0 left-0 w-full h-[70px] p-4 text-white bg-[#111] transition-transform duration-500 px-4 ${
+      className={`fixed z-50 top-0 left-0 w-full h-[70px] text-white bg-[#111] transition-transform duration-500 px-4 py-2 ${
         hasScrolled ? 'translate-y-0' : '-translate-y-[70px]'
       }`}
     >
       <div className="max-w-1200 w-full mx-auto flex items-center justify-between">
-        <Logo className="w-32" />
+        <Logo className="w-40" src="/images/logo-10.png" />
         <div className="hidden sm:flex items-center">
           {navigationLinks(path).map((link, i) => (
             <NavLinkWithDot key={i} link={link} i={i} />
