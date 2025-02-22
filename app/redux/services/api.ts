@@ -19,7 +19,7 @@ const fetchFn = async (url: RequestInfo, options?: RequestInit): Promise<Respons
 }
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: `${process.env.NEXT_PUBLIC_LOCAL_API_URL}/api`,
+  baseUrl: `${process.env.NEXT_PUBLIC_LIVE_API_URL}/api`,
   fetchFn: process.env.NODE_ENV === 'test' ? fetchFn : undefined,
   prepareHeaders: (headers) => {
     headers.set('Content-Type', 'application/json')
