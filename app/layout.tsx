@@ -99,7 +99,7 @@ export default async function RootLayout({
     : null
 
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_LIVE_API_URL}/api/testimonial/fetch-testimonials-public`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/testimonial/fetch-testimonials-public`
   )
     .then((res) => res.json())
     .catch(() => [])
