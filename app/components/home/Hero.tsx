@@ -22,7 +22,7 @@ const Hero = () => {
           <h1 className="clip-slide-down hidden sm:block mb-5 text-white roboto-bold text-2xl">
             Bookkeeping Made Easy
           </h1>
-          <p className="clip-slide-down mb-10 border-l-4 border-l-graphite pl-12 scale-in w-fit text-white text-3xl sm:text-4xl lg:text-6xl xl:text-7xl poppins-bold">
+          <p className="clip-slide-down mb-10 border-l-4 border-l-white dark:border-l-graphite pl-12 scale-in w-fit text-white text-3xl sm:text-4xl lg:text-6xl xl:text-7xl poppins-bold">
             Accurate,
             <br /> hassle-free solutions <br /> for your business.
           </p>

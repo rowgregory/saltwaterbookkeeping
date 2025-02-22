@@ -5,13 +5,15 @@ export interface HeaderStatePayload {
   success: boolean
   error: string | false | null
   navigationDrawer: boolean
+  adminNavigationDrawer: boolean
 }
 
 const initialHeaderState: HeaderStatePayload = {
   loading: false,
   success: false,
   error: null,
-  navigationDrawer: false
+  navigationDrawer: false,
+  adminNavigationDrawer: false
 }
 
 export const headerSlice = createSlice({
@@ -23,10 +25,21 @@ export const headerSlice = createSlice({
     },
     closeNavigationDrawer: (state) => {
       state.navigationDrawer = false
+    },
+    openAdminNavigationDrawer: (state) => {
+      state.adminNavigationDrawer = true
+    },
+    closeAdminNavigationDrawer: (state) => {
+      state.adminNavigationDrawer = false
     }
   }
 })
 
 export const headerReducer = headerSlice.reducer as Reducer<HeaderStatePayload>
 
-export const { openNavigationDrawer, closeNavigationDrawer } = headerSlice.actions
+export const {
+  openNavigationDrawer,
+  closeNavigationDrawer,
+  openAdminNavigationDrawer,
+  closeAdminNavigationDrawer
+} = headerSlice.actions

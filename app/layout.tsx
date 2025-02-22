@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { cookies } from 'next/headers'
+import ReduxWrapper from './redux-wrapper'
+import { jwtVerify } from 'jose'
 import './globals.css'
 import './fonts.css'
 import './animations.css'
-import PageWrapper from './page-wrapper'
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700']
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://saltwaterbookkeeping.com'),
@@ -79,15 +87,39 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const userData = (await cookies()).get('authToken')?.value
+
+  const payload = userData
+    ? (await jwtVerify(userData, new TextEncoder().encode(process.env.JWT_SECRET!))).payload
+    : null
+
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_LOCAL_API_URL}/api/testimonial/fetch-testimonials-public`
+  )
+    .then((res) => res.json())
+    .catch(() => [])
+
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <PageWrapper>{children}</PageWrapper>
+      <body className={`antialiased ${inter.className}`}>
+        <ReduxWrapper
+          data={{
+            isAuthenticated: payload?.isAuthenticated,
+            id: payload?.id,
+            username: payload?.username,
+            isAdmin: payload?.isAdmin,
+            role: payload?.role,
+            isSoundEffectsOn: payload?.isSoundEffectsOn,
+            testimonials: data?.testimonials
+          }}
+        >
+          {children}
+        </ReduxWrapper>
       </body>
     </html>
   )

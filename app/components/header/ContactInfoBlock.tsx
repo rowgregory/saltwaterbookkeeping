@@ -1,6 +1,5 @@
 import { ContactInfoBlockProps } from '@/app/types/header.types'
 import { FC } from 'react'
-import AwesomeIcon from '../common/AwesomeIcon'
 
 const ContactInfoBlock: FC<ContactInfoBlockProps> = ({
   icon,
@@ -11,10 +10,10 @@ const ContactInfoBlock: FC<ContactInfoBlockProps> = ({
 }) => {
   return (
     <div className={`flex gap-x-4 ${className}`} onClick={onClick}>
-      <AwesomeIcon icon={icon} className="text-aquablue w-7 h-7" />
+      {icon}
       <div className="flex flex-col">
-        <p className="text-xs text-dimgray roboto-regular">{titleKey}</p>
-        <p className="text-white poppins-semibold">{textKey}</p>
+        <p className="text-xs text-midnightabyss dark:text-dimgray roboto-regular">{titleKey}</p>
+        <p className="text-midnightabyss dark:text-white poppins-semibold">{textKey}</p>
       </div>
     </div>
   )

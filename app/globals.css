@@ -5,21 +5,48 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --text: #282828;
+  --scrollbar: #888;
+  --track: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #111;
     --foreground: #ededed;
+    --text: #fff;
+    --scrollbar: #222;
+    --track: #111;
   }
 }
 
 body {
-  color: #fff;
-  background: #111;
+  background: var(--background);
+  color: var(--text);
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@layer utilities {
+  .dark-admin-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #12111c inset !important;
+    box-shadow: 0 0 0 1000px #12111c inset !important;
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+    background-color: #12111c !important;
+    background-clip: border-box !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+  .light-admin-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+    box-shadow: 0 0 0 1000px #fff inset !important;
+    -webkit-text-fill-color: #282828 !important;
+    color: #282828 !important;
+    background-color: #fff !important;
+    background-clip: border-box !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
 }
 
 @layer utilities {
@@ -28,18 +55,13 @@ body {
   }
 }
 
-::-webkit-scrollbar {
-  width: 6px; /* Set the width of the scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #1ca3ba; /* Orange-500 color */
-  border-radius: 6px; /* Rounded thumb */
-  border: 3px solid #1ca3ba;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #111;
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .t-1 {
@@ -74,12 +96,14 @@ body {
   object-fit: cover;
   aspect-ratio: 1/1;
 }
-.blob-1 {
-  background-image: url("/images/blob-2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: 1/1;
+
+@media screen and (max-height: 1025px) {
+  .admin-testimonial-modal {
+    height: calc(100dvh - 200px);
+  }
+}
+@media screen and (max-height: 520px) {
+  .admin-testimonial-modal {
+    height: calc(100dvh);
+  }
 }

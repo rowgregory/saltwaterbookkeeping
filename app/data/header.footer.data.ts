@@ -12,27 +12,56 @@ const socialMedia: SocialMediaProps[] = [
   }
 ]
 
-const navigationLinks = (path: string): NavigationLinkProps[] => [
-  {
-    textKey: 'Home',
-    linkKey: '/',
-    active: path === '/'
-  },
-  {
-    textKey: 'About',
-    linkKey: '/about',
-    active: path === '/about'
-  },
-  {
-    textKey: 'QuickBooks Services',
-    linkKey: '/services',
-    active: path === '/services'
-  },
-  {
-    textKey: 'Contact',
-    linkKey: '/contact',
-    active: path === '/contact'
+const navigationLinks = (
+  path: string,
+  isAuthenticated: boolean,
+  isVisible: boolean
+): NavigationLinkProps[] => {
+  const links = [
+    {
+      textKey: 'Home',
+      linkKey: '/',
+      active: path === '/'
+    },
+    {
+      textKey: 'About',
+      linkKey: '/about',
+      active: path === '/about'
+    },
+    {
+      textKey: 'QuickBooks Services',
+      linkKey: '/services',
+      active: path === '/services'
+    },
+    {
+      textKey: 'Testimonials',
+      linkKey: '/testimonials',
+      active: path === '/testimonials'
+    },
+    {
+      textKey: 'Contact',
+      linkKey: '/contact',
+      active: path === '/contact'
+    }
+  ]
+
+  if (isVisible) {
+    if (isAuthenticated) {
+      links.push({
+        textKey: 'Dashboard',
+        linkKey: '/admin/dashboard',
+        active: path === '/admin/dashboard'
+      })
+    } else {
+      links.push({
+        textKey: 'Login',
+        linkKey: '/auth/login',
+        active: path === '/auth/login'
+      })
+    }
   }
-]
+
+  return links
+}
 
 export { socialMedia, navigationLinks }

@@ -3,6 +3,7 @@ import Hero from './components/home/Hero'
 import HighlightCards from './components/home/HighlightCards'
 import WhyChooseUs from './components/elements/WhyChooseUs'
 import TailoredSolutions from './components/elements/TailoredSolutions'
+import TestimonialBlock from './components/elements/TestimonialBlock'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <WhoWeAre />
       <WhyChooseUs />
       <TailoredSolutions />
+      <TestimonialBlock />
     </div>
   )
 }

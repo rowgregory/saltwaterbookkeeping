@@ -1,9 +1,7 @@
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
-
 interface ContactInfoBlockProps {
   titleKey: string
   textKey: string
-  icon: IconDefinition
+  icon: JSX.Element
   className?: string
   onClick?: () => void
 }
@@ -15,6 +13,7 @@ interface NavLinkWithDotProps {
     active: boolean
   }
   i: number
+  dotIndex?: number
 }
 
 export type { ContactInfoBlockProps, NavLinkWithDotProps }

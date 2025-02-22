@@ -17,8 +17,8 @@ const Hero: FC<HeroProps> = ({ src, title }) => {
         priority={true}
       />
       <div
-        className="absolute z-10 top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 flex-col w-full 
-      h-full flex justify-center bg-black/70 px-3"
+        className="absolute z-10 top-1/2 bg-black/40 left-1/2 -translate-x-1/2 -translate-y-1/2 flex-col w-full 
+      h-full flex justify-center px-3"
       >
         <div className="max-w-screen-md mx-auto w-full flex flex-col justify-center items-center">
           <h1 className="text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-center">

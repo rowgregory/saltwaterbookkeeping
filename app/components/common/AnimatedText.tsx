@@ -5,13 +5,14 @@ import { FC } from 'react'
 
 interface AnimatedTextProps {
   text: string
+  className?: string
 }
 
-const AnimatedText: FC<AnimatedTextProps> = ({ text }) => {
+const AnimatedText: FC<AnimatedTextProps> = ({ text, className }) => {
   const { containerRef, visible, words } = useAnimateTextOnScroll(text)
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className={className}>
       {words.map((word, index) => (
         <span
           key={index}
@@ -19,7 +20,7 @@ const AnimatedText: FC<AnimatedTextProps> = ({ text }) => {
             visible ? 'opacity-100 translate-y-0' : 'translate-y-10'
           }`}
           style={{
-            transitionDelay: `${index * 200}ms`,
+            transitionDelay: `${index * 100}ms`,
             transitionTimingFunction: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)'
           }}
         >

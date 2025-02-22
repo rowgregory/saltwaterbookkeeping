@@ -9,7 +9,7 @@ const TailoredSolutions = () => {
   const { videoRef } = useVideo()
 
   return (
-    <div className="relative w-full mb-32">
+    <div className="relative w-full text-white">
       <Video
         videoRef={videoRef}
         className="absolute top-0 left-0 w-full h-full object-cover z-0"

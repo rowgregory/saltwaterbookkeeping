@@ -24,15 +24,15 @@ const ServiceCard: FC<ServiceCardProps> = ({ service }) => {
         </div>
       </div>
       <div
-        className={`w-[95%] sm:w-5/6 bg-graphite h-28 -mt-16 flex items-center justify-between gap-5 p-4 sm:p-7 relative z-40 overflow-hidden
+        className={`w-[95%] sm:w-5/6 bg-white dark:bg-graphite h-28 -mt-16 flex items-center justify-between gap-5 p-4 sm:p-7 relative z-40 overflow-hidden
         before:absolute before:content-[''] before:top-0 before:-left-3 before:bg-aqua-g 
-        before:w-20 before:h-40 before:skew-x-[20deg] before:z-0`}
+        before:w-20 before:h-40 before:skew-x-[20deg] before:z-0 shadow-servicecardlight dark:shadow-servicecarddark`}
       >
         <div className="grid grid-cols-12 gap-x-3 relative z-10">
-          <span className="col-span-4 h-14 w-14 border-[3px] border-[#343434] rounded-full bg-aquablue flex items-center justify-center">
+          <span className="col-span-4 h-14 w-14 border-[3px] border-white dark:border-[#343434] rounded-full bg-aquablue flex items-center justify-center">
             <div
               style={{ backgroundImage: `url(${service.icon})` }}
-              className="w-8 h-8 bg-cover bg-no-repeat"
+              className="w-8 h-8 bg-cover bg-no-repeat group-hover:animate-rotateToTwoOClock"
             ></div>
           </span>
           <span className="col-span-8 flex items-center poppins-bold text-17 sm:text-lg">

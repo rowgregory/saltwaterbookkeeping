@@ -11,10 +11,10 @@ const About = () => {
       <Hero src="/images/about-bg.png" title="About Us" />
       <div className="px-4 sm:pt-32 pb-32 sm:pb-60 relative">
         <div className="max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-1200 mx-auto w-full flex flex-col md:grid md:grid-cols-12 gap-y-20 md:gap-x-12 lg:gap-x-10">
-          <div className="md:col-span-6 order-2 sm:order-1">
-            <div className="relative z-0 w-full h-fit flex items-center justify-center overflow-hidden">
+          <div className="md:col-span-6 order-2 sm:order-1 relatve">
+            <div className="relative z-10 w-full h-fit flex items-center justify-center overflow-hidden">
               <video
-                className="absolute top-0 left-0 w-full h-full object-cover z-0"
+                className="absolute top-0 left-0 w-full h-full object-cover"
                 autoPlay
                 loop
                 muted
@@ -31,13 +31,20 @@ const About = () => {
               />
             </div>
             <Picture
+              src="/images/abstract-1.png"
+              alt="Geometric circles"
+              className="block dark:hidden object-cover absolute
+            right-0 top-40 w-[500px] z-0 h-[500px] aspect-square"
+              priority={false}
+            />
+            <Picture
               src="/images/many-triangles.png"
               alt="Geometric triangles"
-              className="float object-cover absolute right-0 translate-y-1/2 md:top-32 z-[-1] w-[700px] h-[700px] aspect-square"
+              className="hidden dark:block float object-cover absolute right-0 translate-y-1/2 md:top-32 z-[-1] w-[700px] h-[700px] aspect-square"
               priority={false}
             />
           </div>
-          <div className="flex flex-col md:col-span-6 order-1 sm:order-2">
+          <div className="flex flex-col md:col-span-6 order-1 sm:order-2 relative z-10">
             <AnimatedText text="The Heart of Saltwater Bookkeeping" />
             <span className="mt-7 text-15 roboto-regular">
               Welcome to Saltwater Bookkeeping! I&apos;m thrilled to offer my services to small
@@ -67,9 +74,7 @@ const About = () => {
           <div className="col-span-12"></div>
         </div>
       </div>
-      <div className="bg-almostblack pt-40">
-        <HighlightCards />
-      </div>
+      <HighlightCards />
       <WhoWeAre />
     </div>
   )

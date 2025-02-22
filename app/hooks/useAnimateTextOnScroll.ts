@@ -17,7 +17,7 @@ const useAnimateTextOnScroll = (text: string) => {
           }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: '150px 0px' }
     )
 
     if (containerRef.current) {
