@@ -8,14 +8,6 @@ const nextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "https://saltwaterbookkeeping.com/:path*",
-      },
-    ];
-  },
 };
 
 export default nextConfig;
