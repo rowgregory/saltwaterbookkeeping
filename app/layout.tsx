@@ -105,7 +105,7 @@ export default async function RootLayout({
     .catch(() => [])
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`antialiased ${inter.className}`}>
         <ReduxWrapper
           data={{
