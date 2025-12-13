@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { authMiddleware } from './app/middleware/authMiddleware'
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const start = performance.now()
 
   // Extract tokens from cookies
